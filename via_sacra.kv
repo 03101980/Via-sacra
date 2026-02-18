@@ -1,0 +1,428 @@
+#:kivy 2.3.0
+
+MDScreen:
+    MDNavigationLayout:
+        ScreenManager:
+            id: screen_manager
+            MainScreen:
+                name: 'main'
+            IntroScreen:
+                name: 'intro'
+            EstacaoScreen:
+                id: estacao1
+                name: 'estacao1'
+                station_number: 1
+            EstacaoScreen:
+                id: estacao2
+                name: 'estacao2'
+                station_number: 2
+            EstacaoScreen:
+                id: estacao3
+                name: 'estacao3'
+                station_number: 3
+            EstacaoScreen:
+                id: estacao4
+                name: 'estacao4'
+                station_number: 4
+            EstacaoScreen:
+                id: estacao5
+                name: 'estacao5'
+                station_number: 5
+            EstacaoScreen:
+                id: estacao6
+                name: 'estacao6'
+                station_number: 6
+            EstacaoScreen:
+                id: estacao7
+                name: 'estacao7'
+                station_number: 7
+            EstacaoScreen:
+                id: estacao8
+                name: 'estacao8'
+                station_number: 8
+            EstacaoScreen:
+                id: estacao9
+                name: 'estacao9'
+                station_number: 9
+            EstacaoScreen:
+                id: estacao10
+                name: 'estacao10'
+                station_number: 10
+            EstacaoScreen:
+                id: estacao11
+                name: 'estacao11'
+                station_number: 11
+            EstacaoScreen:
+                id: estacao12
+                name: 'estacao12'
+                station_number: 12
+            EstacaoScreen:
+                id: estacao13
+                name: 'estacao13'
+                station_number: 13
+            EstacaoScreen:
+                id: estacao14
+                name: 'estacao14'
+                station_number: 14
+            ConclusaoScreen:
+                name: 'conclusao'
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            radius: (0, 16, 16, 0)
+            elevation: 4
+            width: "240dp"
+            md_bg_color: app.theme_cls.bg_dark
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: "8dp"
+                spacing: "8dp"
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    padding: "12dp"
+                    spacing: "12dp"
+                    md_bg_color: app.theme_cls.primary_color
+                    radius: [15]
+
+                    FitImage:
+                        source: "assets/logo.jpg"  # Adicione sua logo
+                        size_hint: None, None
+                        size: "48dp", "48dp"
+                        radius: [24]
+
+                    MDLabel:
+                        text: "Via Sacra"
+                        font_style: "H6"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        adaptive_height: True
+                        padding_y: "12dp"
+
+                ScrollView:
+                    MDList:
+                        spacing: "12dp"
+                        padding: "8dp"
+
+                        OneLineIconListItem:
+                            text: "Página Principal"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('main')
+                            IconLeftWidget:
+                                icon: "home"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Introdução"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('intro')
+                            IconLeftWidget:
+                                icon: "book-open-page-variant"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 1"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao1')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 2"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao2')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 3"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao3')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 4"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao4')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 5"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao5')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 6"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao6')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 7"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao7')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 8"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao8')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 9"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao9')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 10"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao10')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 11"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao11')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 12"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao12')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 13"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao13')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Estação 14"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('estacao14')
+                            IconLeftWidget:
+                                icon: "cross"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Conclusão"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.change_screen('conclusao')
+                            IconLeftWidget:
+                                icon: "flag"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+                        OneLineIconListItem:
+                            text: "Mudar Tema"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                            on_release: app.toggle_theme()
+                            IconLeftWidget:
+                                icon: "theme-light-dark"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+
+# Telas
+<MainScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Página Principal"
+            elevation: 2
+            left_action_items: [['menu', lambda x: app.open_nav_drawer()]]
+            right_action_items: [['theme-light-dark', lambda x: app.toggle_theme()]]  # Botão tema
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: "120dp"
+            padding: "16dp"
+            spacing: "8dp"
+            MDBoxLayout:
+                size_hint: None, None
+                size: "80dp", "80dp"
+                pos_hint: {"center_x": 0.5}
+                FitImage:
+                    source: "assets/logo.jpg"
+                    radius: [40]
+        MDLabel:
+            text: 'Via Sacra'
+            halign: 'center'
+            theme_text_color: "Secondary"
+            font_style: "H5"
+
+<IntroScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Introdução"
+            elevation: 2
+            left_action_items: [['menu', lambda x: app.open_nav_drawer()]]
+            right_action_items: [['theme-light-dark', lambda x: app.toggle_theme()]]  # Botão tema
+        MDLabel:
+            text: "Texto da Introdução"
+            halign: 'center'
+            theme_text_color: "Secondary"
+
+<EstacaoScreen>:
+    md_bg_color: app.theme_cls.bg_normal  
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            id: top_app_bar
+            title: root.station_station
+            elevation: 2
+            left_action_items: [['menu', lambda x: app.open_nav_drawer()]]
+            right_action_items: [['arrow-left', lambda x: app.prev_screen()],['arrow-right', lambda x: app.next_screen()],['theme-light-dark', lambda x: app.toggle_theme()]]  # Setas + botão tema
+            md_bg_color: app.theme_cls.primary_color
+        MDBoxLayout:
+            orientation: 'vertical'
+            MDLabel:
+                text: root.station_titre
+                halign: 'center'
+                theme_text_color: "Custom"
+                text_color: app.theme_cls.primary_color
+                font_style: "H5"
+                spacing: "5dp"
+                size_hint_y: None
+                font_name: "fontes/Roboto_condensed-ExtraBold.ttf"
+                height: self.texture_size[1]
+                line_height: 1.5
+                mipmap: True  # Melhora qualidade do texto em diferentes escalas
+            Image:
+                source: root.station_image
+                size_hint_y: None
+                height: "200dp"
+                allow_stretch: True
+                keep_ratio: True
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            # Alinhamento
+      
+            MDBoxLayout:
+                orientation: 'vertical'
+                adaptive_height: True
+                padding: "16dp"
+                spacing: "16dp"
+                MDLabel:
+                    text: root.station_text_texto_moderador
+                    halign: 'left'
+                    theme_text_color: "Error"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                MDLabel:
+                    text: root.station_text_texto_resp
+                    halign: 'left'
+                    theme_text_color: "Error"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: root.station_text_texto_um
+                    halign: 'justify'
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1) if app.theme_cls.theme_style == "Dark" else (0, 0, 0, 1)
+                    font_name: "fontes/Roboto-Italic.ttf"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: root.station_text_texto_dois
+                    halign: 'justify'
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1) if app.theme_cls.theme_style == "Dark" else (0, 0, 0, 1)
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: root.station_text_texto_tres
+                    halign: 'justify'
+                    font_name: "fontes/Roboto-SemiBold.ttf"
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1) if app.theme_cls.theme_style == "Dark" else (0, 0, 0, 1)
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: root.station_text_texto_oration
+                    halign: 'justify'
+                    theme_text_color: "Error"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    padding: "0dp", "16dp"
+
+<ConclusaoScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Conclusão"
+            elevation: 2
+            left_action_items: [['menu', lambda x: app.open_nav_drawer()]]
+            right_action_items: [['theme-light-dark', lambda x: app.toggle_theme()]]  # Botão tema
+        MDLabel:
+            text: "Texto da Conclusão"
+            halign: 'justify'
+            theme_text_color: "Secondary"
